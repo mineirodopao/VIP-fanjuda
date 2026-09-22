@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #111;
+}
+
+
+/* FUNDO */
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("fundo.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px 30px;
+}
+
+
+/* PERFIL */
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* FOTO REDONDA */
+
+.profile-photo {
+    width: 115px;
+    height: 115px;
+
+    margin: 0 auto;
+
+    padding: 3px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff1493,
+        #7b2cff
+    );
+
+    overflow: hidden;
+
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.35);
+}
+
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.profile h1 {
+    margin-top: 15px;
+
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+.profile p {
+    margin-top: 7px;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* CAIXA */
+
+.country-box {
+    width: 100%;
+
+    padding: 25px 18px;
+
+    border-radius: 22px;
+
+    background: rgba(15, 15, 20, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+.label {
+    text-align: center;
+
+    color: #ff5cb8;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.country-box h2 {
+    text-align: center;
+
+    font-size: 22px;
+}
+
+
+.description {
+    margin-top: 7px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* BOTÕES DE PAÍS */
+
+.country-button {
+    width: 100%;
+    height: 75px;
+
+    margin-top: 12px;
+
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 17px;
+
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: 0.25s;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.country-button:hover {
+    transform: translateY(-3px);
+}
+
+
+.brazil {
+    background: rgba(0, 150, 80, 0.25);
+
+    border: 1px solid rgba(0, 220, 120, 0.4);
+}
+
+
+.usa {
+    background: rgba(50, 80, 200, 0.25);
+
+    border: 1px solid rgba(90, 130, 255, 0.4);
+}
+
+
+/* BANDEIRA */
+
+.flag {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 31px;
+}
+
+
+/* TEXTO DO PAÍS */
+
+.country-text {
+    flex: 1;
+
+    margin-left: 13px;
+}
+
+
+.country-text strong {
+    display: block;
+
+    font-size: 16px;
+}
+
+
+.country-text small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+/* SETA */
+
+.arrow {
+    font-size: 30px;
+
+    color: #aaa;
+}
+
+
+/* SEGURANÇA */
+
+.secure {
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* LINKS */
+
+.links {
+    display: none;
+
+    margin-top: 25px;
+}
+
+
+.selected-country {
+    text-align: center;
+
+    margin-bottom: 14px;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* BOTÃO DE LINK */
+
+.link-button {
+    width: 100%;
+
+    min-height: 70px;
+
+    margin-bottom: 12px;
+
+    padding: 12px 14px;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: rgba(10, 10, 10, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 17px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.25s;
+}
+
+
+.link-button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(30, 30, 30, 0.85);
+}
+
+
+/* ÍCONE */
+
+.link-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #ff1493,
+        #7b2cff
+    );
+
+    font-size: 21px;
+}
+
+
+/* TEXTO */
+
+.link-text {
+    flex: 1;
+
+    margin-left: 13px;
+}
+
+
+.link-text strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+
+.link-text small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+/* ALTERAR PAÍS */
+
+.change-button {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: #bbb;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .profile-photo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .profile h1 {
+        font-size: 24px;
+    }
+
+    .country-box {
+        padding: 22px 14px;
+    }
+}
