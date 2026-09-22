@@ -1,0 +1,9 @@
+{
+  "name": "vip-fanjuda",
+  "version": "1.0.0",
+  "description": "Maah Franjuda VIP landing page with country selection",
+  "private": true,
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
